@@ -1,0 +1,20 @@
+PODS:
+  - DropDown (2.3.13)
+  - IQKeyboardManager (6.5.19)
+
+DEPENDENCIES:
+  - DropDown
+  - IQKeyboardManager
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - IQKeyboardManager
+
+SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+
+PODFILE CHECKSUM: fb9432d35c1a96201f43cab39a5dc34759413798
+
+COCOAPODS: 1.15.2

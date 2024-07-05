@@ -1,0 +1,6 @@
+framework module Pods_text_to_speech {
+  umbrella header "Pods-text-to-speech-umbrella.h"
+
+  export *
+  module * { export * }
+}

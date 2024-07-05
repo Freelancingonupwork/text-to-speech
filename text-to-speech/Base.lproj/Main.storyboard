@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="text_to_speech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QdO-LF-Put">
+                                <rect key="frame" x="30" y="140" width="333" height="34"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter text for speech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5a-me-mO7">
+                                <rect key="frame" x="30" y="99" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87M-9Z-KaW">
+                                <rect key="frame" x="30" y="728" width="333" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="16L-11-LO8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Speech Now"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IF2-P6-ZUt"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="api-W3-qYX">
+                                <rect key="frame" x="28" y="245" width="337" height="31"/>
+                                <connections>
+                                    <action selector="onSliderUpdate:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yh9-UW-r17"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcq-91-00u">
+                                <rect key="frame" x="30" y="214" width="279" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MY2-ya-Kx3">
+                                <rect key="frame" x="339" y="214" width="24" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaz-qy-55E">
+                                <rect key="frame" x="30" y="325" width="333" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sIC-9r-eyb"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Select voice">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="Select voice">
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onDropdownVoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dcz-59-Ivv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QdO-LF-Put" secondAttribute="trailing" constant="30" id="1Kb-Rl-OTZ"/>
+                            <constraint firstItem="87M-9Z-KaW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Va-2J-JDz"/>
+                            <constraint firstItem="Z5a-me-mO7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="2gD-X1-ykK"/>
+                            <constraint firstItem="Hcq-91-00u" firstAttribute="top" secondItem="QdO-LF-Put" secondAttribute="bottom" constant="40" id="3f9-Yq-EHQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yaz-qy-55E" secondAttribute="trailing" constant="30" id="B3M-vb-ZAc"/>
+                            <constraint firstItem="api-W3-qYX" firstAttribute="top" secondItem="Hcq-91-00u" secondAttribute="bottom" constant="10" id="HoY-86-ER2"/>
+                            <constraint firstItem="MY2-ya-Kx3" firstAttribute="leading" secondItem="Hcq-91-00u" secondAttribute="trailing" constant="30" id="IXg-Vc-uVT"/>
+                            <constraint firstItem="QdO-LF-Put" firstAttribute="top" secondItem="Z5a-me-mO7" secondAttribute="bottom" constant="20" id="KiB-b3-cmZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="87M-9Z-KaW" secondAttribute="bottom" constant="50" id="M3s-hP-87P"/>
+                            <constraint firstItem="Hcq-91-00u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="MAi-ay-aXZ"/>
+                            <constraint firstItem="Z5a-me-mO7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Oj7-Xv-lu0"/>
+                            <constraint firstItem="QdO-LF-Put" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SfC-ya-p5j"/>
+                            <constraint firstItem="87M-9Z-KaW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="U3w-0q-cQJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="api-W3-qYX" secondAttribute="trailing" constant="30" id="axW-Tp-a5F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="87M-9Z-KaW" secondAttribute="trailing" constant="30" id="co8-Ln-E98"/>
+                            <constraint firstItem="yaz-qy-55E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="d6F-e6-HOl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MY2-ya-Kx3" secondAttribute="trailing" constant="30" id="dtD-8p-HVQ"/>
+                            <constraint firstItem="MY2-ya-Kx3" firstAttribute="centerY" secondItem="Hcq-91-00u" secondAttribute="centerY" id="iyc-JP-Ub8"/>
+                            <constraint firstItem="api-W3-qYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qAD-6Y-zRp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z5a-me-mO7" secondAttribute="trailing" constant="30" id="uoZ-GA-1uh"/>
+                            <constraint firstItem="yaz-qy-55E" firstAttribute="top" secondItem="api-W3-qYX" secondAttribute="bottom" constant="50" id="xcJ-Sp-rVT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ddVoice" destination="yaz-qy-55E" id="WT4-W7-cBU"/>
+                        <outlet property="lbRate" destination="MY2-ya-Kx3" id="6XH-wn-GxF"/>
+                        <outlet property="sRate" destination="api-W3-qYX" id="SV2-mp-rzj"/>
+                        <outlet property="tvSpeechText" destination="QdO-LF-Put" id="zFf-8y-9tC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.48091603053435" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
